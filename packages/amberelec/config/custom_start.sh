@@ -39,11 +39,6 @@ case "${1}" in
 	;;
 *)
 # Any commands that you want to run after the frontend has started goes here
-mkdir -p /var/lib/alsa/ 
-amixer sset "Playback Path" SPK_HP 
-alsactl store 
-ln -s /dev/input/event3 /dev/input/by-path/platform-rg351-keys-event 
-systemctl restart volume.service
     exit 0
 	;;
 esac
